@@ -1,4 +1,4 @@
-image: node:16.8.0-stretch
+image: node:16.16.0
 
 stages:          # List of stages for jobs, and their order of execution
   - build
