@@ -59,7 +59,7 @@ test-e2e-job:
     # - apt-get update
     # - apt-get -y install google-chrome-stable=117.0.5938.88
     
-    - npm run test:e2e --baseUrl=${DEPLOYMENT_URL}
+    - npm run test:e2e -- --baseUrl=$DEPLOYMENT_URL
 
   artifacts:
     when: on_failure
