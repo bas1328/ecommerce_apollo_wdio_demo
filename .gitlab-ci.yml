@@ -1,4 +1,4 @@
-image: node:16.16.0
+image: timbru31/node-chrome
 
 stages:          # List of stages for jobs, and their order of execution
   - build
@@ -55,9 +55,9 @@ test-e2e-job:
     - DEPLOYMENT_URL=$(cat vercel_deployment_url.txt)
     - echo $DEPLOYMENT_URL
 
-    # Update
-    - apt-get update
-    - apt-get -y install google-chrome-stable=117.0.5938.88
+    # # Update
+    # - apt-get update
+    # - apt-get -y install google-chrome-stable=117.0.5938.88
     
     - npm run test:e2e --baseUrl=$DEPLOYMENT_URL
 

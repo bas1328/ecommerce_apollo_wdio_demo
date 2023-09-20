@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import ProductItem from "./ProductItem";
+import ProductItem from "./ProductCard";
 import "@testing-library/jest-dom";
 
 // TODO: create separete stub system for mocks, not to use 'real' data

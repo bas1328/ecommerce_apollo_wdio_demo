@@ -1,8 +1,8 @@
 import styles from "./ProductItem.module.scss";
-import ProductItem from "@/components/ui/ProductItem/ProductItem";
 import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import { GET_PRODUCT_BY_ID } from "@/queries/getProductByIdQuery";
+import ProductCard from "@/components/ui/ProductCard/ProductCard";
 
 export default function ProductDescriptionPage() {
   const { id } = useRouter().query;
@@ -20,7 +20,7 @@ export default function ProductDescriptionPage() {
 
   return (
     <main className={styles.main}>
-      <ProductItem
+      <ProductCard
         name={product.name}
         image={product.image}
         id={id as string}

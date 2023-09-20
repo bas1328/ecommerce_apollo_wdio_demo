@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { GET_ALL_PRODUCTS_QUERY } from "queries/getAllProductsQuery";
 
-import ProductItem from "@/components/ui/ProductItem/ProductItem";
-
 import styles from "./ProductList.module.scss";
 import createApolloClient from "apollo-client";
+import ProductCard from "@/components/ui/ProductCard/ProductCard";
 
 // TODO: add types
 export default function ProductList({ characters }: any) {
@@ -16,7 +15,7 @@ export default function ProductList({ characters }: any) {
           <ul>
             {characters?.map((product: any) => (
               <li key={product.id}>
-                <ProductItem
+                <ProductCard
                   name={product.name}
                   image={product.image}
                   id={product.id}
