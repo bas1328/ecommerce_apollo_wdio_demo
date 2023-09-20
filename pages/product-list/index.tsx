@@ -10,9 +10,9 @@ import styles from "./ProductList.module.scss";
 export default function ProductList({ characters }: any) {
   return (
     <main className={styles.main}>
+      <h1>Our products</h1>
       {Boolean(characters) ? (
         <>
-          <h1>Our products</h1>
           <ul>
             {characters?.map((product: any) => (
               <li key={product.id}>
