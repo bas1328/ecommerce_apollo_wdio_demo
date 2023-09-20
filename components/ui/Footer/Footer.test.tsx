@@ -6,7 +6,7 @@ describe("Footer", () => {
   it("renders a Footer", () => {
     const screen = render(<Footer />);
 
-    const heading = screen.getByText(/lorem/i);
+    const heading = screen.getByText(/RickAndMortyTSHIRT/i);
 
     expect(heading).toBeInTheDocument();
     // expect(screen).toMatchSnapshot();
