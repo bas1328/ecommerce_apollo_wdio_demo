@@ -1,7 +1,5 @@
-import Image from "next/image";
 import styles from "./ProductItem.module.scss";
-import ProductItem from "@/pages/product-list/components/ProductItem/ProductItem";
-import createApolloClient from "@/apollo-client";
+import ProductItem from "@/components/ui/ProductItem/ProductItem";
 import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import { GET_PRODUCT_BY_ID } from "@/queries/getProductByIdQuery";

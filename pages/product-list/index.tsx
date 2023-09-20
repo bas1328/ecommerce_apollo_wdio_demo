@@ -1,10 +1,10 @@
 import Link from "next/link";
-import createApolloClient from "@/apollo-client";
-import { GET_ALL_PRODUCTS_QUERY } from "@/queries/getAllProductsQuery";
+import { GET_ALL_PRODUCTS_QUERY } from "queries/getAllProductsQuery";
 
-import ProductItem from "@/pages/product-list/components/ProductItem/ProductItem";
+import ProductItem from "@/components/ui/ProductItem/ProductItem";
 
 import styles from "./ProductList.module.scss";
+import createApolloClient from "apollo-client";
 
 // TODO: add types
 export default function ProductList({ characters }: any) {
