@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { GET_PRODUCT_BY_ID } from "@/queries/getProductByIdQuery";
 
 export default function ProductDescriptionPage() {
-  
   const { id } = useRouter().query;
 
   const { loading, error, data } = useQuery(GET_PRODUCT_BY_ID, {
@@ -23,7 +22,11 @@ export default function ProductDescriptionPage() {
 
   return (
     <main className={styles.main}>
-      <ProductItem name={product.name} image={product.image} />
+      <ProductItem
+        name={product.name}
+        image={product.image}
+        id={id as string}
+      />
     </main>
   );
 }
