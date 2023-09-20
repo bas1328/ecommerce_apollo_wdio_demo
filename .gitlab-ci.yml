@@ -57,7 +57,7 @@ test-e2e-job:
 
     # Update
     - apt-get update
-    - apt-get install google-chrome-stable
+    - apt-get -y install google-chrome-stable=117.0.5938.88
     
     - npm run test:e2e --baseUrl=$DEPLOYMENT_URL
 
