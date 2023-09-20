@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <div className={styles.container}>
-      <Link href="/">Home</Link>
-      <Link href="/product-list">Our products</Link>
+      <Link href="/">home 🏠</Link>
+      <Link href="/product-list">our products 👕</Link>
     </div>
   );
 }

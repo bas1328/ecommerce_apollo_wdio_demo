@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Tshirt from "@/components/ui/Tshirt/Tshirt";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +16,11 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <h1>You finally found an online shop for Rick and Morty fans</h1>
-        <p>Feel free to find your ideal fan T-shirt!</p>
+        <p>Find your ideal fan T-shirt today!</p>
+        <Tshirt
+          name={"Long Sleeved Morty"}
+          image={"https://rickandmortyapi.com/api/character/avatar/209.jpeg"}
+        />
       </main>
     </>
   );
