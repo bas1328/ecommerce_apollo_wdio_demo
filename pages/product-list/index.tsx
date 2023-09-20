@@ -11,19 +11,17 @@ export default function ProductList({ characters }: any) {
     <main className={styles.main}>
       <h1>Our products</h1>
       {Boolean(characters) ? (
-        <>
-          <ul>
-            {characters?.map((product: any) => (
-              <li key={product.id}>
-                <ProductCard
-                  name={product.name}
-                  image={product.image}
-                  id={product.id}
-                />
-              </li>
-            ))}
-          </ul>
-        </>
+        <ul>
+          {characters?.map((product: any) => (
+            <li key={product.id}>
+              <ProductCard
+                name={product.name}
+                image={product.image}
+                id={product.id}
+              />
+            </li>
+          ))}
+        </ul>
       ) : null}
     </main>
   );
