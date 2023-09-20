@@ -56,8 +56,8 @@ test-e2e-job:
     - echo $DEPLOYMENT_URL
 
     # Update
-    - apt-get update
-    - apt-get install google-chrome-stable
+    # - apt-get update
+    # - apt-get install google-chrome-stable
     - run test:e2e @dev-env --baseUrl=$DEPLOYMENT_URL
 
   artifacts:

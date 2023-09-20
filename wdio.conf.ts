@@ -88,7 +88,7 @@ export const config: Options.Testrunner = {
       "goog:chromeOptions": {
         args: [
           "--no-sandbox",
-          // "--headless",
+          "--headless",
           "--disable-dev-shm-usage",
           "--disable-gpu",
           "--window-size=1920,1080",
