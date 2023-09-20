@@ -21,9 +21,23 @@ unit-test-job:   # This job runs in the test stage.
   script:
     - npm run test:unit
 
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
+deploy_preview:
+  stage: deploy
+  except:
+    - main
   script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+    - npm install --global vercel
+    - vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
+    - vercel build --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt  --token=$VERCEL_TOKEN
+
+deploy_production:
+  stage: deploy
+  only:
+    - main
+  script:
+    - npm install --global vercel
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --prod --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+
