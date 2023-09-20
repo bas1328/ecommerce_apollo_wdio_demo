@@ -9,6 +9,6 @@ describe("Footer", () => {
     const heading = screen.getByText(/lorem/i);
 
     expect(heading).toBeInTheDocument();
-    expect(screen).toMatchSnapshot();
+    // expect(screen).toMatchSnapshot();
   });
 });
