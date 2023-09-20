@@ -40,4 +40,11 @@ deploy_production:
     - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
     - vercel build --prod --token=$VERCEL_TOKEN
     - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+    - DEPLOYMENT_URL=$(vercel -t $VERCEL_TOKEN --confirm)
+    - echo $DEPLOYMENT_URL >vercel_deployment_url.txt
+
+  artifacts:
+    when: on_success
+    paths:
+      - vercel_deployment_url.txt
 
