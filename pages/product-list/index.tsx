@@ -1,6 +1,8 @@
-import Image from "next/image";
-import styles from "./ProductList.module.scss";
+import Link from "next/link";
+import ProductItem from "@/pages/product-list/components/ProductItem/ProductItem";
 import { mockProducts } from "@/utils/common";
+
+import styles from "./ProductList.module.scss";
 
 export default function ProductList() {
   return (
@@ -8,15 +10,11 @@ export default function ProductList() {
       <h1>Our products</h1>
       <ul>
         {mockProducts.data.characters.results.map((product: any) => (
-          <li key={product.id}>
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={500}
-              height={500}
-            />
-            <h2>{product.name}</h2>
-          </li>
+          <Link key={product.id} href={`/product-list/${product.id}`}>
+            <li>
+              <ProductItem name={product.name} image={product.image} />
+            </li>
+          </Link>
         ))}
       </ul>
     </main>
