@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-height: 600px;
+
+}
+
+.base {
+    position: absolute;
+    z-index: -1;
+}
+.printImage {
+    position: relative;
+    top: 200px
+}

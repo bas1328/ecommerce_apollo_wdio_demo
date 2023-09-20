@@ -48,3 +48,20 @@ deploy_production:
     paths:
       - vercel_deployment_url.txt
 
+test-e2e-job:
+  stage: test-e2e
+
+  script:
+    - DEPLOYMENT_URL=$(cat vercel_deployment_url.txt)
+    - echo $DEPLOYMENT_URL
+
+    # Update
+    - apt-get update
+    - apt-get install google-chrome-stable
+    - run test:e2e @dev-env --baseUrl=$DEPLOYMENT_URL
+
+  artifacts:
+    when: on_failure
+    paths:
+      - ./logs
+
