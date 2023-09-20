@@ -15,8 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aspernatur!</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora deserunt quia nostrum temporibus ipsa. Esse libero animi quo ex facilis sequi vitae, reprehenderit quasi officiis officia ducimus nesciunt rerum?</p>
+        <h1>You finally found an online shop for Rick and Morty fans</h1>
+        <p>Feel free to find your ideal fan T-shirt!</p>
       </main>
     </>
   );

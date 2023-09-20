@@ -5,7 +5,7 @@ export default function MainNav({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      {children}
       <Footer />
     </>
   );
