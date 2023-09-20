@@ -2,8 +2,8 @@ import Image from "next/image";
 import styles from "./Tshirt.module.scss";
 
 interface TshirtProps {
-  name: string;
-  image: string;
+  name?: string;
+  image?: string;
 }
 
 export default function Tshirt({ name, image }: TshirtProps) {
@@ -12,14 +12,14 @@ export default function Tshirt({ name, image }: TshirtProps) {
       <Image
         className={styles.base}
         src="/tshirt.png"
-        alt={name}
+        alt={name || "T-shirt"}
         width={500}
         height={500}
       />
       <Image
         className={styles.printImage}
-        src={image}
-        alt={name}
+        src={image || "/tshirt.png"}
+        alt={name || "T-shirt-print"}
         width={150}
         height={150}
       />

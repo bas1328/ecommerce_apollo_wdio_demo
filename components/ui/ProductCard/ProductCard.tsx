@@ -4,9 +4,9 @@ import Tshirt from "../Tshirt/Tshirt";
 import styles from "./ProductCard.module.scss";
 
 interface ProductCardProps {
-  name: string;
-  image: string;
-  id: string;
+  name?: string;
+  image?: string;
+  id?: string;
 }
 export default function ProductItem({ name, image, id }: ProductCardProps) {
   function addToCartHandler() {
