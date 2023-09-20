@@ -1,3 +1,9 @@
+import styles from "./ProductItem.module.css";
+
+
+
 export default function ProductItem() {
-  return <div>ProductItem</div>;
+  return <main className={styles.main}>
+    
+  </main>;
 }
