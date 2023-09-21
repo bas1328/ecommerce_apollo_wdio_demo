@@ -18,7 +18,7 @@ const MiniBasketButton = () => {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button>
+        <button  id='basket' >
           <Image src="/basket.png" alt="basket" width={30} height={30} />
         </button>
       </Popover.Trigger>
@@ -44,7 +44,7 @@ const MiniBasketButton = () => {
                       height={50}
                     />
                   </div>
-                  <button onClick={() => removeFromCartHandler(id as string)}>
+                  <button id='remove_item' onClick={() => removeFromCartHandler(id as string)}>
                     remove
                   </button>
                 </div>

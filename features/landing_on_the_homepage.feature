@@ -9,7 +9,7 @@ Background:
   Scenario: Is not Google
       Then I expect that the title is not "Google"
 
-  Scenario: Is correct
+  Scenario: User can navigate and add/delete items
       Then I expect that the title is "demo shop"
-
-
+      When I click on the button "#basket" 
+      Then I expect that element "h4" contains the text "you picked 0 items"
