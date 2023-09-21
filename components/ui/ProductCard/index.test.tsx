@@ -1,16 +1,27 @@
 import { render } from "@testing-library/react";
 import ProductItem from "./ProductCard";
 import "@testing-library/jest-dom";
+import { Character } from "@/gql/graphql";
+import { BasketContext } from "@/pages/_app";
 
-// TODO: create separete stub system for mocks, not to use 'real' data
+const basketItems = [] as Character[];
+const setBasketItems = jest.fn();
+
 describe("ProductItem", () => {
   it("renders a ProductItem", () => {
     const screen = render(
-      <ProductItem
-        name={"my item"}
-        image={"https://rickandmortyapi.com/api/character/avatar/152.jpeg"}
-        id={"1"}
-      />
+      <BasketContext.Provider
+        value={{
+          basketItems,
+          setBasketItems,
+        }}
+      >
+        <ProductItem
+          name={"my item"}
+          image={"https://rickandmortyapi.com/api/character/avatar/152.jpeg"}
+          id={"1"}
+        />
+      </BasketContext.Provider>
     );
 
     const heading = screen.getByRole("heading", {
@@ -18,6 +29,6 @@ describe("ProductItem", () => {
     });
 
     expect(heading).toBeInTheDocument();
-    // expect(screen).toMatchSnapshot();
+    expect(screen).toMatchSnapshot();
   });
 });
