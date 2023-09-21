@@ -1,0 +1,24 @@
+.minicardContainer {
+  min-width: 8rem;
+  min-height: 5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  > button {
+    background-color: rgb(221, 62, 62);
+    border-bottom-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 10rem;
+    height: 2rem;
+    margin-top: 1rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      background-color: rgb(34, 54, 121);
+    }
+  }
+}

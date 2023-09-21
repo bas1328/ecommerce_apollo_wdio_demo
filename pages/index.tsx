@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>You finally found an online shop for Rick and Morty fans</h1>
+        <h1>you finally found an online shop for Rick and Morty fans</h1>
         <p>Find your ideal fan T-shirt today!</p>
         <Tshirt
           name={"Long Sleeved Morty"}
