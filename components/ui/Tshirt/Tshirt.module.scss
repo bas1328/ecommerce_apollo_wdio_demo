@@ -7,10 +7,10 @@
 
 .base {
     position: absolute;
+    z-index: -1;
 }
 
 .printImage {
     position: relative;
     top: 5rem;
-    z-index: 1;
 }
