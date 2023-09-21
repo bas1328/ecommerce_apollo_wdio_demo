@@ -13,15 +13,15 @@ export default function Tshirt({ name, image }: TshirtProps) {
         className={styles.base}
         src="/tshirt.png"
         alt={name || "T-shirt"}
-        width={500}
-        height={500}
+        width={300}
+        height={300}
       />
       <Image
         className={styles.printImage}
         src={image || "/tshirt.png"}
         alt={name || "T-shirt-print"}
-        width={150}
-        height={150}
+        width={100}
+        height={100}
       />
     </div>
   );

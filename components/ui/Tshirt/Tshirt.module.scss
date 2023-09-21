@@ -2,16 +2,15 @@
   display: flex;
   justify-content: center;
   position: relative;
-  min-height: 500px;
-  margin: 2rem;
+  min-height: 20rem;
 }
 
 .base {
     position: absolute;
-    z-index: -1;
 }
 
 .printImage {
     position: relative;
-    top: 200px
+    top: 5rem;
+    z-index: 1;
 }

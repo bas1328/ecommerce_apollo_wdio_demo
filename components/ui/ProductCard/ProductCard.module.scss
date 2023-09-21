@@ -1,18 +1,30 @@
 .container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 2rem;
-  min-width: 35rem;
+  gap: 1rem;
+  min-width: 20rem;
+  min-height: 30rem;
+  padding: 1rem;
   margin: 1rem;
-  padding: 3rem;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 0.586);
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
   > button {
-    background-color: rgba(0, 0, 255, 0.45);
-    border: 1px solid black;
-    border-radius: 2rem;
+    background-color: rgb(62, 99, 221);
+    border-bottom-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
     width: 10rem;
     height: 2rem;
     margin-top: 1rem;
     color: white;
+    &:hover {
+      background-color: rgb(34, 54, 121);
+    }
+  }
+  &:hover {
+    transition: all .2s ease-in;
+   transform: translateY(-.1rem);
   }
 }
